@@ -4,7 +4,6 @@ exports.balances = function () {
     });
 };
 
-
 exports.sendAtBlock = function (from, to, ether, blockNumber) {
     console.log('Ξ' + ether + ' ' + from + ' >> ' + to + ' @' + blockNumber);
     return eth.sendTransaction({
