@@ -4,7 +4,7 @@ var _ = _ || {};
 
 _.balances = function () {
     eth.accounts.forEach(function (e, i) {
-        console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " + web3.fromWei(eth.getBalance(e), "ether") + " ether");
+        console.log("  eth.accounts["+i+"]: " +  e + "\tbalance: Ξ" + web3.fromWei(eth.getBalance(e), "ether"));
     });
 };
 
