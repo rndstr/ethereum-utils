@@ -1,5 +1,5 @@
 ```bash
-$ parity --geth
-$ geth attach
-> loadScript('./index.js')
+$ parity
+$ node
+> require('.')
 ```
