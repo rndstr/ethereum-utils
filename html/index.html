@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>$$$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+$(function () {
+    var tws = $('div[id^=tradingview');
+    tws.attr('style', '');
+    tws.css({display: 'inline-block'});
+});
+    </script>
+<style>
+body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+</style>
+  </head>
+  <body>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+    <script type="text/javascript">
+    const width3 = Math.floor(window.innerWidth / 3) - 5;
+    const width2 = Math.floor(window.innerWidth / 2) - 8;
+    const height = Math.floor(window.innerHeight / 2) - 138;
+function createWidget(symbol, width) {
+        new TradingView.widget({
+            "width": width,
+            "height": height,
+            "symbol": symbol,
+            "interval": "30",
+            "timezone": "Europe/Zurich",
+            "theme": "White",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "save_image": false,
+            "hideideas": true,
+            "studies": [
+                "MACD@tv-basicstudies"
+            ]
+        });
+    }
+    </script>
+
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">{
+"symbols": [
+{"description": "ETHUSD", "proName": "KRAKEN:ETHUSD"},
+{"description": "REPUSD", "proName": "KRAKEN:REPUSD"}
+], "locale": "en"}</script>
+<script type="text/javascript">
+createWidget('KRAKEN:ETHUSD', width2);
+createWidget('KRAKEN:REPUSD', width2);
+</script>
+
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">{
+"symbols": [
+{"description": "XMRUSD", "proName": "KRAKEN:XMRUSD"},
+{"description": "GNTETH", "proName": "POLONIEX:GNTETH"},
+{"description": "SCBTC", "proName": "POLONIEX:SCBTC"}
+], "locale": "en"}</script>
+<script type="text/javascript">
+createWidget('KRAKEN:XMRUSD', width3);
+createWidget('POLONIEX:GNTETH', width3);
+createWidget('POLONIEX:SCBTC', width3);
+</script>
+</div>
+  </body>
+</html>

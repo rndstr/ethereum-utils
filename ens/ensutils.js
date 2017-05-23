@@ -1384,14 +1384,19 @@ function getContent(name) {
   return resolverContract.at(resolverAddress).content(node);
 }
 
-// globalize for require()
-global.ethRegistrar = ethRegistrar;
-global.ensContract = ensContract;
-global.auctionRegistrarContract = auctionRegistrarContract;
-global.deedContract = deedContract;
-global.fifsRegistrarContract = fifsRegistrarContract;
-global.resolverContract = resolverContract;
-global.publicResolver = publicResolver;
-global.reverseRegistrarContract = reverseRegistrarContract;
-global.reverseRegistrar = reverseRegistrar;
+if (typeof global !== 'undefined') {
+  // globalize for require()
+  global.ethRegistrar = ethRegistrar;
+  global.ensContract = ensContract;
+  global.auctionRegistrarContract = auctionRegistrarContract;
+  global.deedContract = deedContract;
+  global.fifsRegistrarContract = fifsRegistrarContract;
+  global.resolverContract = resolverContract;
+  global.publicResolver = publicResolver;
+  global.reverseRegistrarContract = reverseRegistrarContract;
+  global.reverseRegistrar = reverseRegistrar;
+  global.namehash = namehash;
+  global.getAddr = getAddr;
+  global.getContent = getContent;
+}
 
