@@ -23,7 +23,7 @@ exports.balances = function (accounts) {
 
 exports.send = function (from, to, ether) {
     console.log('Ξ' + ether + ' ' + from + ' >> ' + to);
-    var tx eth.sendTransaction({
+    var tx = eth.sendTransaction({
         from: from,
         to: to,
         value: web3.toWei(ether, 'ether')
