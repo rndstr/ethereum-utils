@@ -99,7 +99,7 @@ exports.ens.finalize = function (from, name) {
     }
 
     console.log('-- setAddr');
-    var txaddr = publicResolver.setAddr(namehash('somename.eth'), eth.accounts[0], {from: eth.accounts[0]})
+    var txaddr = publicResolver.setAddr(namehash(name + '.eth'), from, {from: from})
     logtx(txaddr);
     if (!istx(txaddr)) {
         throw new Error('setAddr failed');
